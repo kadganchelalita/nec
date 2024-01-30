@@ -5,7 +5,7 @@ include_once('config/db.php');
 include_once('includes/functions.php');
 
 if (!isLoggedIn()) {
-    redirectTo('login.php');
+    redirectTo('index.html');
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -22,3 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+<a href="logout.php">
+  <button>Logout</button>
+</a>
