@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration and Login</title>
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<h2>Login Form</h2>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="login.php" method="post">
     <div class="container">
-        <form id="registrationForm" action="register.php" method="post" enctype="multipart/form-data">
-            <h2>User Registration</h2>
-            <label for="username">Username:</label>
-            <input type="text" name="username" required>
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
-            <label for="password">Password:</label>
-            <input type="password" name="password" required>
-
-            <label for="file">Upload File:</label>
-            <input type="file" name="file" accept=".txt, .pdf">
-
-            <button type="submit">Register</button>
-        </form>
-
-        <form id="loginForm" action="login.php" method="post">
-            <h2>User Login</h2>
-            <label for="username">Username:</label>
-            <input type="text" name="username" required>
-
-            <label for="password">Password:</label>
-            <input type="password" name="password" required>
-
-            <button type="submit">Login</button>
-        </form>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <button type="submit">Login</button>
+      
     </div>
+  </form>
+</div>
 
-    <script src="script.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+document.getElementById('id01').style.display='block'
+</script>
+
 </body>
 </html>
-
