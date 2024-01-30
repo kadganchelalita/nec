@@ -1,5 +1,6 @@
 <?php
 session_start();
 session_destroy();
-redirectTo('login.php');
+$url = "index.html";
+header('Location: '.$url);
 ?>
